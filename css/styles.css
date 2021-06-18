@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*font-family: 'Berkshire Swash', cursive;*/
+    /*font-family: 'Shojumaru', cursive;*/
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)),url("../assets/img/zeldaBackground2.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 75%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    user-select: none;
+}
+
+.main{
+    position: absolute;
+    top: 35%;
+}
+
+
+
+.container{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    z-index: 50;
+    margin-bottom: 45px;
+}
+
+header ul{
+    background-color: rgba(255,255,255,0.25);
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    border-bottom: 2px solid black;
+    height: 100%;
+}
+
+header ul li{
+    display: inline-block;
+    text-align: center;
+    align-self: center;
+}
+
+header ul li a{
+    color: black;
+    text-decoration: none;
+    margin-left: 5px;
+    user-select: none;
+    border-left: 2px solid green;
+    transition: color 0.5s,border 0.5s;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+header ul li a:hover{
+    color: green;
+    border-right: 2px solid green;
+}
+
+header ul li p{
+    color: white;
+    font-size: 30px;
+    user-select: none;
+    animation: change 2s alternate infinite;
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+@keyframes change {
+    0%{
+        color:rgb(190, 190, 190); 
+    }
+    50%{
+        color:rgb(80, 80, 80);
+    }
+    100%{
+        color:rgb(0, 0, 0);
+    }
+}
+
+.section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    top: 20%;
+    margin: auto;
+}
+
+.history{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    border: 5px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.history-nav{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 10%;
+    background-color: rgb(44, 44, 44);
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+}
+
+.history-nav h1{
+    display: inline-block;
+    position: relative;
+    top: -10%;
+    color: green;
+}
+
+.history-nav img{
+    width: 130px;
+    height: 100%;
+    resize: none;
+}
+
+.content{
+    display: inline-block;
+    width: 100%;
+    height: 90%;
+    margin-top: 10px;
+}
+
+.content p{
+    text-align: justify;
+    color: white;
+}
+
+.content p::first-letter{
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 30px;
+    color: green;
+}
+
+.content img{
+    float: left;
+    width: 210px;
+    height: 240px;
+    border-radius: 20%;
+    margin-right: 5px;
+}
+
+.form-message{
+    text-align: center;
+    color: white;
+    font-family: cursive;
+}
+
+.contact-form{
+    width: 100%;
+    border-top: 3px solid black;
+    box-sizing: border-box;
+    
+}
+
+.contact-form input, textarea{
+    display: block;
+    background-color: darkgrey;
+    border: none;
+    padding: 15px;
+    border: 2px solid black;
+    width: 30%;
+    box-sizing: border-box;
+    color: black;
+    font-weight: 700;
+}
+
+.contact-form input{
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+.contact-form input::placeholder, textarea::placeholder{
+    font-weight: 700;
+    color: black;
+}
+
+.contact-form input:focus, textarea:focus{
+    outline: none;
+}
+
+#enviar{
+    border-radius: 10%;
+    cursor: pointer;
+    color: black;
+    font-weight: 700;
+    width: 20%;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1232px) {
+
+    header{
+        height: 30%;
+    }
+    header ul{
+        display: block;
+    }
+
+    header ul li:first-child{
+        text-align: center;
+        display: block;
+    }
+    header ul li:not(:first-child){
+        display: block;
+        text-align: justify;
+        position: relative;
+        margin: auto;
+        margin-bottom: 2px;
+    }
+    .section{
+        top: 40%;
+    }
+}
+
+@media screen and (max-width:656px) {
+
+    .container{
+        height: auto;
+    }
+    .section{
+        width: 100%;
+    }
+    .history{
+        width: 100%;
+    }
+    .history-nav h1{
+        font-size: 15px;
+    }
+    .contact-form input, textarea,#enviar{
+        width: 100%;
+    }
+    #enviar{
+        border-radius: 0px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:438px) {
+
+    header ul li p{
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:296px) {
+
+    header ul li p{
+        text-align: center;
+        display: inline-block;
+        font-size: 15px;
+    }
+}
